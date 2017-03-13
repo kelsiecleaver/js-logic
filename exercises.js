@@ -136,9 +136,14 @@ console.log(isEqual(4,5));
  * Console.log your result.
 */
 function notEqual(first,second){
-  if(first )
+  if(first !== second){
+    return "Opposites do attract.";
+  }else{
+    return "Cause it's like you're my mirror.";
+  }
 }
-
+console.log(notEqual(3,3));
+console.log(notEqual(5,3));
 /*
  * #8
  * Function - spareChange
@@ -150,8 +155,15 @@ function notEqual(first,second){
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
+function spareChange(money){
+  if(money > 100){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(spareChange(56));
+console.log(spareChange(107));
 /*
  * #9
  * Function - dirty30
@@ -166,7 +178,15 @@ function notEqual(first,second){
  * Console.log your result.
 */ 
 
-
+function dirty30(one,two,three){
+  if (one + two + three > 30){
+    return true
+  }else{
+    return false
+  }
+}
+console.log("dirty ", dirty30(8,3,6));
+console.log("dirty2 ", dirty30(16,19,21));
 /*
  * #10
  * Function - evenStevens
@@ -181,7 +201,7 @@ function notEqual(first,second){
 
 
 /*
- * #11
+ * #1
  * Function - daClub
  * Create a function named `daClub` which takes two parameters: `cover` and `age`.
  *
