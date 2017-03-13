@@ -101,7 +101,6 @@ console.log("boo ", mustBeTrue(2<3));
  * Console.log your result.
 */
 
-
 /*
  * #6
  * Function - isEqual
@@ -198,10 +197,18 @@ console.log("dirty2 ", dirty30(16,19,21));
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function evenStevens(num){
+if (num % 2 == 0){
+  return true
+}else{
+return false
+}
+}
+console.log(evenStevens(6));
+console.log(evenStevens(5));
 
 /*
- * #1
+ * #11
  * Function - daClub
  * Create a function named `daClub` which takes two parameters: `cover` and `age`.
  *
@@ -212,7 +219,6 @@ console.log("dirty2 ", dirty30(16,19,21));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
 
 /*
  * #12
