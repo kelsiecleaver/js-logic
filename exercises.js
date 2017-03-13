@@ -114,8 +114,15 @@ console.log("boo ", mustBeTrue(2<3));
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
-
-
+function isEqual(first,second){
+  if(first === second){
+    return "You look mahvelous!";
+  }else{
+    return "I don't know who you are anymore.";
+  }
+}
+console.log(isEqual(3,3));
+console.log(isEqual(4,5));
 /*
  * #7
  * Function - notEqual
@@ -128,7 +135,9 @@ console.log("boo ", mustBeTrue(2<3));
  * If the strings are not equal, the function will return the message "Opposites do attract." Otherwise, return the message: "Cause it's like you're my mirror." 
  * Console.log your result.
 */
-
+function notEqual(first,second){
+  if(first )
+}
 
 /*
  * #8
