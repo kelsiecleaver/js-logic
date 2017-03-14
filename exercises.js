@@ -34,6 +34,13 @@ function canVote(age){
   }
 }
 console.log(canVote(18));
+
+
+/*
+*/
+
+
+
 /*
  * #2
  * Function - login
@@ -100,7 +107,12 @@ console.log("boo ", mustBeTrue(2<3));
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
+function bigBird(word){
+  if(word.length === 3){
+    return "Word to Big Bird";
+  }
+}
+console.log(bigBird("and"));
 /*
  * #6
  * Function - isEqual
@@ -219,7 +231,15 @@ console.log(evenStevens(5));
  * If BOTH values are 21 or over, the function will return the message: "Welcome to the Legends Lounge." Otherwise, it will return the message: "Chuck E Cheese is across the street."
  * Console.log your result.
 */ 
-
+function daClub(cover,age){
+  if(cover && age >= 21){
+    return "Welcome to the Legends Loudge"
+  }else{
+    return "Chuck E Cheese is across the street."
+  }
+}
+console.log(daClub(23,23));
+console.log(daClub(21,20));
 /*
  * #12
  * Function - graduation
@@ -232,7 +252,14 @@ console.log(evenStevens(5));
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
+function graduation(credits,thesis){
+  if(credits >= 120 || thesis >= 120){
+    return "Congratulations on a job well done.";
+    }else{ 
+      return "See you in summer school.";
+    }
+  }
+console.log(graduation(8,56));
 
 /*
  * #13
@@ -245,8 +272,18 @@ console.log(evenStevens(5));
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
-
+function moneyTrain(speed){
+  if (speed < 50){
+    return "You are riding Honolulu's Rail." 
+  }else if(speed <100){
+    return "You are riding an Amtrack."
+  }else if(speed >= 100){
+   return "Now you ballin' in the Shinkansen!"
+}
+}
+console.log(moneyTrain(40));
+console.log(moneyTrain(57));
+console.log(moneyTrain(107));
 /*
  * #14
  * Function - buyDoughnut
@@ -259,7 +296,26 @@ console.log(evenStevens(5));
  * Console.log budget and doughnutBought.
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
-*/ 
+*/ /*
+------var budget = 25;
+var doughnutPrice = 4;
+var doughnutBought = 0;
+function buyDoughnut(){
+  return (budget - doughnutPrice)
+}
+*/
+var budget = 16;
+var doughnutPrice = 4;
+var doughnutBought = 0;
+function buyDoughnut(){
+  budget = budget - doughnutPrice
+  doughnutBought++
+}
+console.log(budget);
+console.log(doughnutBought);
+buyDoughnut()
+console.log(budget);
+console.log(doughnutBought);
 
 
 /*
@@ -288,14 +344,22 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 4"
  * "Player: 5"
 */
-
+var Players =["Marcus Mariota", "Demarco Murray", "Eric Weems", "Harry Douglas", "Derrick Henry"]
+  console.log("Player: 1 " + Players[0]); 
+  console.log("Player: 2 " + Players[1]);
+  console.log("Player: 3 " + Players[2]);
+  console.log("Player: 4 " + Players[3]);
+  console.log("Player: 5 " + Players[4]);
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
+for (var i = 0; i<myFavFoods.length; i++){
+  console.log(myFavFoods[i]);
 
+}
 
 /*
  * #17
@@ -311,8 +375,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
-
-
+var numArray = [17, 87, 23, 98, 123];
+var total = 0;
+function sumItUp(arr){
+  for(var i = 0; i <arr.length; i++){
+    total = arr[i] + total;
+  }
+}
+  sumItUp(numArray);
+  console.log(total);
 /*
  * #18
  * Function - allStars
