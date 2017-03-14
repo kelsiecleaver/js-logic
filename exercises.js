@@ -304,16 +304,17 @@ function buyDoughnut(){
   return (budget - doughnutPrice)
 }
 */
-var budget = 16;
+var budget = 36;
 var doughnutPrice = 4;
 var doughnutBought = 0;
 function buyDoughnut(){
   budget = budget - doughnutPrice
   doughnutBought++
 }
+buyDoughnut();
 console.log(budget);
 console.log(doughnutBought);
-buyDoughnut()
+buyDoughnut();
 console.log(budget);
 console.log(doughnutBought);
 
@@ -345,12 +346,10 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 var Players =["Marcus Mariota", "Demarco Murray", "Eric Weems", "Harry Douglas", "Derrick Henry"]
-  console.log("Player: 1 " + Players[0]); 
-  console.log("Player: 2 " + Players[1]);
-  console.log("Player: 3 " + Players[2]);
-  console.log("Player: 4 " + Players[3]);
-  console.log("Player: 5 " + Players[4]);
+  for(var i = 1; i<6; i++){
+    console.log("Player: " + i);
 
+  }
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
@@ -399,7 +398,19 @@ function sumItUp(arr){
   var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"];
   var east = [];
   var west = [];
+function allStars(ballers){
+for(var i = 0; i <ballers.length; i++){
+  if(i % 2 === 0){
+    east.push(ballers[i]);
+  }else{
+    west.push(ballers[i]);
 
+  }
+}
+}
+allStars(players);
+console.log(east);
+console.log(west);
 /*
  * #19
  * Function - subways
@@ -414,7 +425,18 @@ function sumItUp(arr){
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+function subways(special){
+  for(var i = 0; i<special.length; i++){
+    console.log(special[i]);
+    if(i % 2 === 1){
+      console.log([i]);
+      special[i] = "Classic Tuna";
 
+    }
+  }
+}
+subways(subOftheDay);
+console.log(subOftheDay);
 /*
 Final Boss
  * #20
@@ -428,11 +450,20 @@ Final Boss
 */
 
   var phrase = "An apple a day keeps Alice feeling awesome!"
-  
+  var newArray = [];
 
+function removeLetter(str){
+  for(var i = 0; i<str.length; i++){
+    console.log(str[i]);
+    if(str[i] !== "a" && str[i] !== "A"){
+      newArray.push(str[i]);
+    }
 
+  }
+}
 
-
+removeLetter(phrase);
+console.log(newArray);
 
 
 
